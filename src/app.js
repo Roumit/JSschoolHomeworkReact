@@ -1,15 +1,27 @@
 import React from "react";
-import ReactDom from "react-dom";
-import AlertList from "./alert_list.js"
+import AlertListPure from "./alert_list"
+import withPortal from "./with_portal"
+
+
+let AlertList = withPortal(AlertListPure);
 
 
 class App extends React.Component {
+
     state = {
         inputText:"",
         disabled: "disabled",
         alerts: []
-    };
+    }
 
+    constructor(props) {
+        super(props);
+        this.inputRef = React.createRef();
+    }
+
+    componentDidMount(){
+        this.inputRef.current.focus();
+    }
 
     onInput = (e) => {
         let disabled = e.target.value ? "" : "disable";
@@ -23,16 +35,17 @@ class App extends React.Component {
     addAlert = () => {
         let alerts = this.state.alerts;
         alerts.push(this.state.inputText);
+        this.inputRef.current.focus();
         this.setState({
             alerts: alerts
         })
     }
     
-
+    
     render(){
         return (
             <div className="input-div">
-                <input onInput={this.onInput}></input>
+                <input ref={this.inputRef} onInput={this.onInput}></input>
                 <button disabled={this.state.disabled} onClick={this.addAlert}>Add alert</button>
                 <div>
                     <AlertList alerts={this.state.alerts} />
