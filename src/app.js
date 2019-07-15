@@ -1,9 +1,10 @@
 import React from "react";
 import AlertListPure from "./alert_list"
 import withPortal from "./with_portal"
+import withDisappear from "./with_disappear";
 
 
-let AlertList = withPortal(AlertListPure);
+let AlertList = withDisappear(withPortal(AlertListPure), 3000);
 
 
 class App extends React.Component {
