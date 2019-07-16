@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-let portalDestination = document.getElementById("allerts-div");
+let portalDestination = document.getElementById("alerts-div");
 
 function withPortal(PureComponent) {
 

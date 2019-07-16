@@ -1,0 +1,7 @@
+.input-div , .alert-div {
+    margin: 10px;
+}
+
+.input-div input , .input-div button {
+    font-size: 12pt;
+}

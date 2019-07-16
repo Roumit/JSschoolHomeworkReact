@@ -48,7 +48,7 @@ class App extends React.Component {
             <div className="input-div">
                 <input ref={this.inputRef} onInput={this.onInput}></input>
                 <button disabled={this.state.disabled} onClick={this.addAlert}>Add alert</button>
-                <div>
+                <div className="alert-div">
                     <AlertList alerts={this.state.alerts} />
                 </div>
             </div>
