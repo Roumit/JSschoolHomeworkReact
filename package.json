@@ -16,7 +16,7 @@
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^5.0.1"
   },
   "homepage": "https://roumit.github.io.git/JSschoolHomeworkReact",
   "browserslist": {
@@ -38,6 +38,6 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.0.0",
     "style-loader": "^0.23.1",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.12"
   }
 }
